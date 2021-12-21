@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CNHolidayICSServer-GoogleAuthQRCode</title>
+</head>
+<body>
+<div style="width: 100%;height: 100%;margin-top: 100px;text-align: center;">
+    {% if qrcode %}
+        <P>请使用谷歌身份验证器(或者其他支持Google Auth的App)扫描下方二维码获取动态密码</P>
+        <img src="data:image/png;base64, {{ qrcode }}" alt="google-auth-qrcode"/>
+    {% else %}
+        <P>Google Auth 秘钥已经初始化完毕，如果丢失，请删除 data 目录下 google_auth_secret.txt 文件，然后访问此页面重新生成。</P>
+    {% endif %}
+</div>
+</body>
+</html>

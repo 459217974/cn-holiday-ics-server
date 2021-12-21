@@ -1,0 +1,7 @@
+--requirement=holiday-cn/requirements.txt
+Flask
+qrcode
+pillow
+cachetools
+gunicorn
+gevent

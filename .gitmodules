@@ -1,0 +1,3 @@
+[submodule "holiday-cn"]
+	path = holiday-cn
+	url = git@github.com:NateScarlet/holiday-cn.git
