@@ -9,8 +9,7 @@ A calendar subscribe server
 
 ## 部署自己的服务
 
-```
-bash
+```bash
 git clone git@github.com:459217974/cn-holiday-ics-server.git
 git submodule update --init
 docker build . -t cn-holiday-ics-server
