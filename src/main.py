@@ -7,8 +7,8 @@ import base64
 from io import BytesIO
 from cachetools import TTLCache, cached
 from flask import Flask, render_template, request, send_file
-from fetch_holidays import fetch_holiday
-from generate_ics import generate_ics
+from scripts.fetch import fetch_holiday
+from scripts.generate_ics import generate_ics
 from google_auth import GoogleAuth
 
 BASE_DIR = os.path.dirname(__file__)
