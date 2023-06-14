@@ -1,11 +1,11 @@
-FROM python:3.6.8 AS builder
+FROM python:3.8.16 AS builder
 WORKDIR /usr/src
 RUN python -m venv venv
 COPY . app
 RUN ./venv/bin/pip install pip --upgrade -i https://pypi.tuna.tsinghua.edu.cn/simple \
 && ./venv/bin/pip install --no-cache-dir -r ./app/requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
-FROM python:3.6.8-slim AS release
+FROM python:3.8.16-slim AS release
 COPY --from=builder /usr/src /usr/src
 WORKDIR /usr/src/app
 ENV PYTHONPATH "${PYTHONPATH}:/usr/src/app/src:/usr/src/app/holiday-cn"
