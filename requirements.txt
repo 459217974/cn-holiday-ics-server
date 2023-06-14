@@ -1,4 +1,4 @@
---requirement=holiday-cn/requirements.txt
+--requirement=holiday-cn/dev-requirements.txt
 Flask
 qrcode
 pillow
